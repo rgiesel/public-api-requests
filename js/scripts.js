@@ -180,3 +180,4 @@ addSearch();
 
 // Adds a click event listener to the search submit to call the above search function
 document.querySelector('#search-submit').addEventListener('click', search);
+document.querySelector('#search-input').addEventListener('keyup', search);
