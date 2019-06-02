@@ -9,7 +9,7 @@ information to construct an employee gallery that displays a card for each
 employee with their photograph and basic information.<br>
 
 When an employee's card is clicked, a modal window is displayed with a larger
-photo and more detailed employee information. From here, the user can click then
+photo and more detailed employee information. From here, the user can click the
 "prev" and "next" buttons to navigate to the previous and next employees without
 having to close the modal window.<br>
 
