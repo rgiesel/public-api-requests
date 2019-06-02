@@ -164,6 +164,11 @@ function search() {
   displayGallery(searchRes);
   modalListeners(searchRes);
   prevNextListeners(attachListenersSearch);
+  if (searchRes.length === 0) {
+    document.querySelector('#gallery').innerHTML =
+      `<h2 class="no-results">No employee names match your search criteria</h2>`;
+    document.querySelector('.no-results').style.color = "white";
+  }
 }
 
 // Fetches user data from the API, displays users, and attaches event listeners
