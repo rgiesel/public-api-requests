@@ -120,6 +120,7 @@ function attachListenersInitial(e) {
     createModal(users[modalNum + 1]);
     modalNum += 1;
   }
+  // Hides the next/prev buttons when at the end/beginning of the modal list
   if (modalNum === 0) {
     document.querySelector('#modal-prev').style.display = 'none';
   } else if (modalNum === users.length - 1) {
@@ -139,6 +140,7 @@ function attachListenersSearch(e) {
     createModal(searchRes[modalNum + 1]);
     modalNum += 1;
   }
+  // Hides the next / prev buttons when at the end/beginning of the modal list
   if (searchRes.length === 1) {
     document.querySelector('#modal-prev').style.display = 'none';
     document.querySelector('#modal-next').style.display = 'none';
