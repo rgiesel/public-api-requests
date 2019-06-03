@@ -120,6 +120,14 @@ function attachListenersInitial(e) {
     createModal(users[modalNum + 1]);
     modalNum += 1;
   }
+  if (modalNum === 0) {
+    document.querySelector('#modal-prev').style.display = 'none';
+  } else if (modalNum === users.length - 1) {
+    document.querySelector('#modal-next').style.display = 'none';
+  } else {
+    document.querySelector('#modal-prev').style.display = '';
+    document.querySelector('#modal-next').style.display = '';
+  }
 }
 
 // One of two possible functions called in the prevNextListeners function (see above)
@@ -130,6 +138,17 @@ function attachListenersSearch(e) {
   } else if (e.target.id === "modal-next" && modalNum <= searchRes.length - 2) {
     createModal(searchRes[modalNum + 1]);
     modalNum += 1;
+  }
+  if (searchRes.length === 1) {
+    document.querySelector('#modal-prev').style.display = 'none';
+    document.querySelector('#modal-next').style.display = 'none';
+  } else if (modalNum === 0) {
+    document.querySelector('#modal-prev').style.display = 'none';
+  } else if (modalNum === searchRes.length - 1) {
+    document.querySelector('#modal-next').style.display = 'none';
+  } else {
+    document.querySelector('#modal-prev').style.display = '';
+    document.querySelector('#modal-next').style.display = '';
   }
 }
 
